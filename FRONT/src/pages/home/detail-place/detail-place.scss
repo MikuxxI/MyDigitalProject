@@ -1,0 +1,35 @@
+page-single-place {
+
+  .container{
+    :content{
+      width: 100%;
+    }
+
+    ion-card{
+      border-radius: 0.7em !important;
+    }
+
+    ion-img {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      margin-left: 1em;
+      width: 3em;
+      height: 3em;
+      border-radius: 0.7em !important;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    ion-icon{
+      color: #3EBDC6;
+      text-align: center;
+    }
+
+    ion-card-header{
+      margin-left: 3em;
+    }
+  }
+
+
+}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="customColor">
+    <ion-title>Cds</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button
+      ion-item
+      *ngFor="let cd of cdsList; let i = index"
+      (click)="onLoadLivre(i)"
+      icon-start
+    >
+    <ion-icon name="remove-circle" [color]="cd.isLended ? 'danger': 'light'">
+    </ion-icon>
+      {{cd.name}}
+
+    </button>
+  </ion-list>
+</ion-content>

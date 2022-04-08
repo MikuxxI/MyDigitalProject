@@ -1,0 +1,25 @@
+  <ion-header>
+  <ion-navbar color="customColor">
+    <div class="tamere">
+      <img src="../../assets/imgs/Logo2.png" height="40px"/>
+    </div>
+    <ion-buttons start >
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <button
+      ion-item
+      *ngFor="let place of placeList; let i = index"
+      (click)="onLoadLivre(i)"
+      icon-start
+    >
+    <page-single-place [place]="place"></page-single-place>
+
+    </button>
+</ion-content>

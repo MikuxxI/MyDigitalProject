@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar style="background-image: url({{place.photo}})">
+    <ion-buttons>
+      <button ion-button clear (click)="dismissModal()"><ion-icon name="arrow-round-back"></ion-icon></button>
+    </ion-buttons>
+    <ion-title icon-start>{{place.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>{{place.name}}</ion-card-header>
+    <ion-card-content>
+      <p>Description : {{place.description}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button
+          col-8
+          ion-button
+          full
+        >
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
