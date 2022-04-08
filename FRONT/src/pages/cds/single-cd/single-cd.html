@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="customColor">
+    <ion-buttons>
+      <button ion-button clear (click)="dismissModal()">Fermer</button>
+    </ion-buttons>
+    <ion-title icon-start>{{cd.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card [ngClass]="{'is-on': !cd.isLended, 'is-off' : cd.isLended}">
+    <ion-card-header>{{cd.name}}</ion-card-header>
+    <ion-card-content>
+      <p *ngFor="let line of cd.description">{{line}}</p>
+      <p>Durée : {{duration}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button
+          col-8
+          ion-button
+          full
+          [color]="!cd.isLended ? 'danger': 'secondary'"
+          (click)=" onToggleAppareil()"
+          [disabled]="disabled"
+        >
+          {{!cd.isLended ? "Louer" : "Rendre"}}
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
