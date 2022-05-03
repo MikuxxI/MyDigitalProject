@@ -27990,8 +27990,30 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
-ion-navbar {
+ion-menu {
   color: aqua !important;
+}
+
+ion-menu .tamere {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+ion-menu img {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 page-home ion-navbar .tamere {
@@ -28014,6 +28036,19 @@ page-home ion-navbar img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+page-single-place .container .title {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-single-place .container .title :last-child {
+  margin-left: auto;
+  margin-top: 10px;
 }
 
 page-single-place .container :content {
