@@ -1,0 +1,21 @@
+discovery {
+
+  .container {
+
+    margin-top: 30px;
+
+    ion-title {
+      text-align: center;
+      color: #3EBDC6;
+      text-decoration: underline;
+    }
+
+    width: 100%;
+
+    ion-card {
+      height: 150px;
+      border-radius: 0.7em !important;
+      justify-content: center;
+    }
+  }
+}

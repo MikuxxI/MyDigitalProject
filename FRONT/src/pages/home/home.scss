@@ -1,15 +1,42 @@
-page-home{
-  ion-navbar{
+page-home {
+  ion-navbar {
 
 
-    .tamere{
+    .tamere {
       display: flex;
       justify-content: center;
     }
-    img{
+
+    img {
 
       align-items: center;
       display: flex;
+    }
+  }
+
+  ion-content {
+    .placeList {
+      span {
+        vertical-align: center;
+        margin-left: 20px;
+        color: #3EBDC6;
+        text-decoration: underline;
+      }
+
+      .entete {
+        display: flex;
+
+        ion-item {
+          font-size: 10px;
+          height: 5px !important;
+          border-radius: 50px !important;
+          margin-right: 20px;
+          margin-left: auto;
+          width: 50%;
+          border: solid #3EBDC6;
+        }
+
+      }
     }
   }
 }

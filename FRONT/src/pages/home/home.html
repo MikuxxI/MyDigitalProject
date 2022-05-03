@@ -1,9 +1,9 @@
-  <ion-header>
+<ion-header>
   <ion-navbar color="customColor">
     <div class="tamere">
-      <img src="../../assets/imgs/Logo2.png" height="40px"/>
+      <img src="../../assets/imgs/Logo2.png" height="40px" />
     </div>
-    <ion-buttons start >
+    <ion-buttons start>
       <button ion-button icon-only (click)="onToggleMenu()">
         <ion-icon name="menu"></ion-icon>
       </button>
@@ -11,15 +11,26 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content>
+  <discovery *ngIf="discovery" [place]="discovery"></discovery>
+  <div class="placeList">
+    <div class="entete">
+      <span><b>Nouveautés</b></span>
+      <ion-item>
+        <ion-select [(ngModel)]="categorieSelected" (change)="refreshFilter()">
+          <ion-option *ngFor="let categorie of categories; let i = index"
+            >{{categorie.name}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
     <button
       ion-item
       *ngFor="let place of placeList; let i = index"
       (click)="onLoadLivre(i)"
       icon-start
     >
-    <page-single-place [place]="place"></page-single-place>
-
+      <page-single-place [place]="place"></page-single-place>
     </button>
+  </div>
 </ion-content>
