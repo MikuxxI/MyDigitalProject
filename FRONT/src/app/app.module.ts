@@ -12,6 +12,8 @@ import { CdsService } from "../services/cds.service";
 import { TimeFormater } from "../shared/timeFormater";
 import { PlaceService } from "../services/place.service";
 import { DetailPlace } from "../pages/home/detail-place/detail-place";
+import { Discovery } from "../pages/home/discovery/discovery";
+import { CategorieService } from "../services/categories.service";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { DetailPlace } from "../pages/home/detail-place/detail-place";
     TabsPage,
     HomePage,
     SingleBookPage,
-    DetailPlace
+    Discovery,
+    DetailPlace,
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -28,11 +31,13 @@ import { DetailPlace } from "../pages/home/detail-place/detail-place";
     TabsPage,
     HomePage,
     SingleBookPage,
-    DetailPlace
+    Discovery,
+    DetailPlace,
   ],
   providers: [
     TimeFormater,
     CdsService,
+    CategorieService,
     PlaceService,
     StatusBar,
     SplashScreen,
