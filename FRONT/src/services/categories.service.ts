@@ -3,22 +3,28 @@ import { Categorie } from "../models/Categorie";
 export class CategorieService {
   categorieList: Categorie[] = [
     {
-      name: "Restaurant gastronomique",
+      id:1,
+      name: "Restaurant",
     },
     {
-      name: "Restaurant gastronomique1",
+      id:2,
+      name: "Evènement",
     },
     {
-      name: "Restaurant gastronomique2",
+      id:3,
+      name: "Lieu culturel",
     },
     {
-      name: "Restaurant gastronomique3",
+      id:4,
+      name: "Activité",
     },
     {
-      name: "Restaurant gastronomique4",
+      id:5,
+      name: "Local",
     },
     {
-      name: "Restaurant gastronomique5",
+      id:6,
+      name: "Tops",
     },
   ];
 }

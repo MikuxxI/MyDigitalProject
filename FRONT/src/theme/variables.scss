@@ -89,3 +89,8 @@ $background:(
 
 @import "roboto";
 @import "noto-sans";
+
+@font-face {   
+  font-family: 'Exobold';    //This is what we are going to call
+  src: url('../assets/fonts/Exo-Bold/ttf');
+}

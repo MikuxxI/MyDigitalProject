@@ -47,4 +47,9 @@ export class HomePage {
       (place) => place.categorie.name === this.categorieSelected.name
     );
   }
+
+  test(test:any){
+    console.log(test);
+    this.categorieSelected = this.categories[0];
+  }
 }

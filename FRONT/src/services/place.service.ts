@@ -9,6 +9,7 @@ export class PlaceService {
       photo:
         "https://www.mrestaurant.fr/public/img/big/copyrightJulietteTreillet1927jpg_61446781283cb.jpg",
       categorie: {
+        id:1,
         name: "Restaurant gastronomique2",
       },
     },
@@ -19,6 +20,7 @@ export class PlaceService {
       photo:
         "https://www.mrestaurant.fr/public/img/big/copyrightJulietteTreillet1927jpg_61446781283cb.jpg",
       categorie: {
+        id:1,
         name: "Restaurant gastronomique2",
       },
     },
@@ -29,6 +31,7 @@ export class PlaceService {
       photo:
         "https://www.mrestaurant.fr/public/img/big/copyrightJulietteTreillet1927jpg_61446781283cb.jpg",
       categorie: {
+        id:1,
         name: "Restaurant gastronomique1",
       },
     },
@@ -39,6 +42,7 @@ export class PlaceService {
       photo:
         "https://www.mrestaurant.fr/public/img/big/copyrightJulietteTreillet1927jpg_61446781283cb.jpg",
       categorie: {
+        id:1,
         name: "Restaurant gastronomique3",
       },
     },
@@ -49,6 +53,7 @@ export class PlaceService {
       photo:
         "https://www.mrestaurant.fr/public/img/big/copyrightJulietteTreillet1927jpg_61446781283cb.jpg",
       categorie: {
+        id:1,
         name: "Restaurant gastronomique2",
       },
     },
@@ -59,6 +64,7 @@ export class PlaceService {
       photo:
         "https://www.mrestaurant.fr/public/img/big/copyrightJulietteTreillet1927jpg_61446781283cb.jpg",
       categorie: {
+        id:1,
         name: "Restaurant gastronomique",
       },
     },
@@ -69,6 +75,7 @@ export class PlaceService {
       photo:
         "https://www.mrestaurant.fr/public/img/big/copyrightJulietteTreillet1927jpg_61446781283cb.jpg",
       categorie: {
+        id:1,
         name: "Restaurant gastronomique",
       },
     },
@@ -79,6 +86,7 @@ export class PlaceService {
       photo:
         "https://www.mrestaurant.fr/public/img/big/copyrightJulietteTreillet1927jpg_61446781283cb.jpg",
       categorie: {
+        id:1,
         name: "Restaurant gastronomique",
       },
     },

@@ -1,20 +1,69 @@
 page-home {
   ion-navbar {
-
-
     .tamere {
       display: flex;
       justify-content: center;
     }
 
     img {
-
       align-items: center;
       display: flex;
     }
   }
 
   ion-content {
+    .first-row {
+      ion-card-header {
+        display: flex;
+        justify-content: right;
+      }
+
+      .icon {
+        width: 35px;
+        height: 35px;
+        margin-bottom: -10px;
+      }
+
+      p {
+        font-family: Exobold !important;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+
+    .second-row {
+
+      ion-card-header {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .icon {
+        width: 25px;
+        height: 25px;
+        margin-bottom: -15px;
+      }
+
+      p {
+        font-family: Exobold !important;
+        font-size: 8px;
+
+      }
+    }
+
+    .row {
+
+      ion-card {
+        background-color: rgba(62, 189, 198, 0.20);
+      }
+
+      .filter-card {
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+    }
+
+
     .placeList {
       span {
         vertical-align: center;
