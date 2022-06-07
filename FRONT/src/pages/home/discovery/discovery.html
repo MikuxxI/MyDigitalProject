@@ -1,0 +1,13 @@
+<div class="container">
+  <ion-title color="#3EBDC6"><p>Découverte de la semaine</p></ion-title>
+  <ion-card [ngStyle]="{'background-image': 'url('+ bg +')'}">
+    <ion-slides
+      slidesPerView="1"
+      centeredSlides
+      (ionSlideWillChange)="slideChange($event)"
+      [ngStyle]="{'background-image': 'url('+ bg +')'}"
+    >
+    </ion-slides>
+    <ion-card-content> {{place.name}} </ion-card-content>
+  </ion-card>
+</div>

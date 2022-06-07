@@ -1,9 +1,9 @@
-  <ion-header>
+<ion-header>
   <ion-navbar color="customColor">
     <div class="tamere">
-      <img src="../../assets/imgs/Logo2.png" height="40px"/>
+      <img src="../../assets/imgs/Logo2.png" height="40px" />
     </div>
-    <ion-buttons start >
+    <ion-buttons start>
       <button ion-button icon-only (click)="onToggleMenu()">
         <ion-icon name="menu"></ion-icon>
       </button>
@@ -11,15 +11,98 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content>
-    <button
-      ion-item
-      *ngFor="let place of placeList; let i = index"
-      (click)="onLoadLivre(i)"
-      icon-start
-    >
-    <page-single-place [place]="place"></page-single-place>
-
+  <div class="container" *ngIf="categories">
+    <div class="row first-row">
+      <div class="col">
+        <ion-card class="filter-card" name="Restaurant" (click)="test($event)" button value="categories[0]">
+          <div class="title">
+            <ion-card-header>
+              <img class="icon" src="../../assets/imgs/restaurant.png"/>
+            </ion-card-header>
+          </div>
+          <ion-card-content>
+            <p>Restaurant</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="col">
+        <ion-card class="filter-card">
+          <div class="title">
+            <ion-card-header>   
+              <img class="icon" src="../../assets/imgs/event.png"/>
+            </ion-card-header>
+          </div>
+          <ion-card-content>
+            <p>Evènement</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    <div class="row second-row">
+      <div class="col">
+        <ion-card class="filter-card">
+          <div class="title">
+            <ion-card-header>
+              <img class="icon" src="../../assets/imgs/place.png"/>
+            </ion-card-header>
+          </div>
+          <ion-card-content>
+            <p>Lieu&nbsp;culturel</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="col">
+        <ion-card class="filter-card">
+          <div class="title">
+            <ion-card-header>
+              <img class="icon" src="../../assets/imgs/activity.png"/>
+            </ion-card-header>
+          </div>
+          <ion-card-content>
+            <p>Activités</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="col">
+        <ion-card class="filter-card">
+          <div class="title">
+            <ion-card-header>
+              <img class="icon" src="../../assets/imgs/local.png"/>
+            </ion-card-header>
+          </div>
+          <ion-card-content>
+            <p>Local</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="col">
+        <ion-card class="filter-card">
+          <div class="title">
+            <ion-card-header>
+              <img class="icon" src="../../assets/imgs/tops.png"/>
+            </ion-card-header>
+          </div>
+          <ion-card-content>
+            <p>Tops</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+  <discovery *ngIf="discovery" [place]="discovery"></discovery>
+  <div class="placeList">
+    <div class="entete">
+      <span><b>Nouveautés</b></span>
+      <ion-item>
+        <ion-select [(ngModel)]="categorieSelected" (change)="refreshFilter()">
+          <ion-option *ngFor="let categorie of categories; let i = index">{{categorie.name}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+    <button ion-item *ngFor="let place of placeList; let i = index" (click)="onLoadLivre(i)" icon-start>
+      <page-single-place [place]="place"></page-single-place>
     </button>
+  </div>
 </ion-content>

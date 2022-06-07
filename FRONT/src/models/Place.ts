@@ -1,11 +1,14 @@
+import { Categorie } from "./Categorie";
+
 export class Place {
   description: string;
   ville: string;
-  photo:string;
+  photo: string;
+  categorie: Categorie;
 
   constructor(public name: string) {
     this.description = "Test";
     this.ville = "Rennes";
+    this.categorie.name = "Restaurant gastronomique";
   }
-
 }

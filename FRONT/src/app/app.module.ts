@@ -5,40 +5,39 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 
 import { MyApp } from "./app.component";
-import { CdsPage } from "../pages/cds/cds";
 import { HomePage } from "../pages/home/home";
 import { TabsPage } from "../pages/tabs/tabs";
 import { SingleBookPage } from "../pages/home/single-book/single-book";
-import { SingleCdPage } from "../pages/cds/single-cd/single-cd";
 import { CdsService } from "../services/cds.service";
 import { TimeFormater } from "../shared/timeFormater";
 import { PlaceService } from "../services/place.service";
 import { DetailPlace } from "../pages/home/detail-place/detail-place";
+import { Discovery } from "../pages/home/discovery/discovery";
+import { CategorieService } from "../services/categories.service";
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
-    CdsPage,
     HomePage,
     SingleBookPage,
-    SingleCdPage,
-    DetailPlace
+    Discovery,
+    DetailPlace,
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     TabsPage,
-    CdsPage,
     HomePage,
     SingleBookPage,
-    SingleCdPage,
-    DetailPlace
+    Discovery,
+    DetailPlace,
   ],
   providers: [
     TimeFormater,
     CdsService,
+    CategorieService,
     PlaceService,
     StatusBar,
     SplashScreen,
