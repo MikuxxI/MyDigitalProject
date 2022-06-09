@@ -39,6 +39,7 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
+  blue:#3EBDC6,
   customColor:(
     trans: linear-gradient(to bottom right, blue, pink),
     base: #3EBDC6,
@@ -91,6 +92,6 @@ $background:(
 @import "noto-sans";
 
 @font-face {   
-  font-family: 'Exobold';    //This is what we are going to call
+  font-family: Exobold;    //This is what we are going to call
   src: url('../assets/fonts/Exo-Bold/ttf');
 }

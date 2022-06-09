@@ -1,25 +1,28 @@
 page-single-place {
 
-  .container{
+  .container {
 
-    .title{
-width: 100%;
-display: flex;
-:last-child{
-  margin-left: auto;;
-  margin-top: 10px;
-}
+    .title {
+      width: 100%;
+      display: flex;
+
+      :last-child {
+        margin-left: auto;
+        ;
+        margin-top: 10px;
+      }
     }
-    :content{
+
+    :content {
       width: 100%;
     }
 
-    ion-card{
+    ion-card {
       border-radius: 0.7em !important;
     }
 
     ion-img {
-      position: absolute;
+      position: absolute !important;
       top: 10px;
       left: 20px;
       margin-left: 1em;
@@ -30,12 +33,11 @@ display: flex;
       max-width: 100%;
     }
 
-    ion-icon{
-      color: #3EBDC6;
+    ion-icon {
       text-align: center;
     }
 
-    ion-card-header{
+    ion-card-header {
       margin-left: 3em;
     }
   }

@@ -3,9 +3,11 @@
   <ion-card>
     <div class="title">
       <ion-card-header>{{place.categorie.name}}</ion-card-header>
-      <ion-icon name="arrow-dropright-circle"></ion-icon>
+      <button style="background-color: white;" item-right clear (click)='like()'>
+        <ion-icon [name]="icone"></ion-icon>
+      </button>
     </div>
-    <ion-card-content>
+    <ion-card-content (click)="onLoadLivre(index)">
       <p>{{place.name}}</p>
     </ion-card-content>
   </ion-card>

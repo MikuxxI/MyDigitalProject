@@ -1,11 +1,21 @@
 <ion-header>
   <ion-navbar style="background-image: url({{place.photo}})">
-    <ion-buttons>
-      <button ion-button clear (click)="dismissModal()">
-        <ion-icon name="arrow-round-back"></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-title icon-start>{{place.name}}</ion-title>
+    <div style="height: 100px;">
+      <img src="../../../assets/imgs/restaurnat.jpg" height="auto" width="auto" />
+    </div>
+    <div>
+      <div style="position: absolute; top:0px; left:0px;">
+        <ion-buttons>
+          <button ion-button clear (click)="dismissModal()">
+            <ion-icon size="large" color="light" name="arrow-round-back" style="font-size: 30px;"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title style="margin-top: 45px; margin-left: -10px;" icon-start>
+          <p style="color: white; margin-top: 5px; margin-left: 5px;">{{place.name}}</p>
+        </ion-title>
+      </div>
+    </div>
+
   </ion-navbar>
 </ion-header>
 
@@ -17,11 +27,48 @@
     </ion-card-content>
   </ion-card>
   <ion-grid>
-    <ion-row> </ion-row>
     <ion-row>
       <ion-col>
-        <button col-8 ion-button full></button>
+        <button col-8 ion-button full style="border-radius:20px;  background-color: #3EBDC6; margin: auto;">
+          <p>Réserver</p>
+        </button>
       </ion-col>
     </ion-row>
+    <div style="display: flex; margin-top: 20px;">
+      <ion-icon size="large" color="light" name="md-pin" style="font-size: 30px;" color="blue"></ion-icon>
+      <div style="display: flex; flex-direction: column; margin-left: 10px;">
+        <ion-row style="font-weight: bold;">
+          Adresse
+        </ion-row>
+        <br>
+        <ion-row style="margin-top: -15px;">
+          {{place.adresse}}
+        </ion-row>
+      </div>      
+    </div>
+    <div style="display: flex; margin-top: 20px;">
+      <ion-icon size="large" color="light" name="md-pin" style="font-size: 30px;" color="blue"></ion-icon>
+      <div style="display: flex; flex-direction: column; margin-left: 10px;">
+        <ion-row style="font-weight: bold;">
+          Horaire
+        </ion-row>
+        <br>
+        <ion-row style="margin-top: -15px;">
+          Lundi au samedi
+        </ion-row>
+      </div>      
+    </div>
+    <div style="display: flex; margin-top: 20px;">
+      <ion-icon size="large" color="light" name="md-pin" style="font-size: 30px;" color="blue"></ion-icon>
+      <div style="display: flex; flex-direction: column; margin-left: 10px;">
+        <ion-row style="font-weight: bold;">
+          Téléphone
+        </ion-row>
+        <br>
+        <ion-row style="margin-top: -15px;">
+          02 99 00 75 13
+        </ion-row>
+      </div>      
+    </div>
   </ion-grid>
 </ion-content>

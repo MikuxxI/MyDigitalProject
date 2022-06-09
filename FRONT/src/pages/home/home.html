@@ -15,7 +15,7 @@
   <div class="container" *ngIf="categories">
     <div class="row first-row">
       <div class="col">
-        <ion-card class="filter-card" name="Restaurant" (click)="test($event)" button value="categories[0]">
+        <ion-card class="filter-card" (click)="test(0)">
           <div class="title">
             <ion-card-header>
               <img class="icon" src="../../assets/imgs/restaurant.png"/>
@@ -27,7 +27,7 @@
         </ion-card>
       </div>
       <div class="col">
-        <ion-card class="filter-card">
+        <ion-card class="filter-card" (click)="test(1)">
           <div class="title">
             <ion-card-header>   
               <img class="icon" src="../../assets/imgs/event.png"/>
@@ -95,14 +95,15 @@
     <div class="entete">
       <span><b>Nouveautés</b></span>
       <ion-item>
+        <ion-label>Catégories</ion-label>
         <ion-select [(ngModel)]="categorieSelected" (change)="refreshFilter()">
           <ion-option *ngFor="let categorie of categories; let i = index">{{categorie.name}}
           </ion-option>
         </ion-select>
       </ion-item>
     </div>
-    <button ion-item *ngFor="let place of placeList; let i = index" (click)="onLoadLivre(i)" icon-start>
-      <page-single-place [place]="place"></page-single-place>
-    </button>
+    <div ion-item *ngFor="let place of placeList; let i = index" icon-start>
+      <page-single-place [place]="place" [index]="i"></page-single-place>
+    </div>
   </div>
 </ion-content>

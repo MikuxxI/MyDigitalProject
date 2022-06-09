@@ -19,7 +19,6 @@ export class HomePage {
   categorieSelected: Categorie;
 
   constructor(
-    private modalCtrl: ModalController,
     private placeService: PlaceService,
     private categorieService: CategorieService,
     private menuCtrl: MenuController
@@ -29,13 +28,6 @@ export class HomePage {
     this.placeList = this.placeService.placeList.slice();
     this.discovery = this.placeList[0];
     this.categories = this.categorieService.categorieList.slice();
-  }
-
-  onLoadLivre(index: number) {
-    let modal = this.modalCtrl.create(SingleBookPage, {
-      index: index,
-    });
-    modal.present();
   }
 
   onToggleMenu() {
@@ -48,8 +40,8 @@ export class HomePage {
     );
   }
 
-  test(test:any){
-    console.log(test);
-    this.categorieSelected = this.categories[0];
+  test(categorieId:number){
+    console.log(categorieId);
+    this.categorieSelected = this.categories[categorieId];
   }
 }

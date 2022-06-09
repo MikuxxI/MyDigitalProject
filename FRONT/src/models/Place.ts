@@ -5,6 +5,7 @@ export class Place {
   ville: string;
   photo: string;
   categorie: Categorie;
+  adresse:string;
 
   constructor(public name: string) {
     this.description = "Test";
