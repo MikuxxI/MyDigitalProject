@@ -96,7 +96,7 @@
       <span><b>Nouveautés</b></span>
       <ion-item>
         <ion-label>Catégories</ion-label>
-        <ion-select [(ngModel)]="categorieSelected" (change)="refreshFilter()">
+        <ion-select [(ngModel)]="categorieSelected">
           <ion-option *ngFor="let categorie of categories; let i = index">{{categorie.name}}
           </ion-option>
         </ion-select>

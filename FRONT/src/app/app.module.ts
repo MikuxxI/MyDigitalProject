@@ -14,6 +14,7 @@ import { PlaceService } from "../services/place.service";
 import { DetailPlace } from "../pages/home/detail-place/detail-place";
 import { Discovery } from "../pages/home/discovery/discovery";
 import { CategorieService } from "../services/categories.service";
+import { SearchPage } from "../pages/search/search";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CategorieService } from "../services/categories.service";
     SingleBookPage,
     Discovery,
     DetailPlace,
+    SearchPage,
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -33,6 +35,7 @@ import { CategorieService } from "../services/categories.service";
     SingleBookPage,
     Discovery,
     DetailPlace,
+    SearchPage
   ],
   providers: [
     TimeFormater,
