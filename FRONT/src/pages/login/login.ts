@@ -28,8 +28,6 @@ export class LoginPage {
 
   connexion() {
     const user = this.users.find(user => user.email === this.email);
-
-    debugger;
     if(user){
       if(user.password === this.mdp){
         this.connected = true;
