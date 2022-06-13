@@ -1,5 +1,5 @@
-import { Component, ViewChild } from "@angular/core";
-import { MenuController, NavController, NavParams } from "ionic-angular";
+import { Component } from "@angular/core";
+import { NavController, NavParams } from "ionic-angular";
 import { User } from "../../models/User";
 import { UserService } from "../../services/login.service";
 import { TabsPage } from "../tabs/tabs";

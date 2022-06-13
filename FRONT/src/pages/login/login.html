@@ -1,48 +1,55 @@
-<ion-content >
-  <div *ngIf="connected; else loginPage"><ion-nav [root]="tabsPage" #myContent></ion-nav></div>
+<ion-content [ngClass]="connected ? 'connected' : 'loginPage'" >
+  <div *ngIf="connected; else loginPage">
+    <ion-nav [root]="tabsPage" #myContent></ion-nav>
+  </div>
   <ng-template #loginPage>
-    <div class="padding">
-    
+    <div color="primary" class="background-color">
       <div class="logo">
-        <ion-icon color="light" name="sunny"></ion-icon>
-        <!-- <ion-icon color="light" name="contact"></ion-icon> -->
-        <!-- <ion-icon color="light" name="cloudy-night"></ion-icon> -->
-        <!-- <img src="../../assets/logo.png"> -->
+        <img src="../../assets/imgs/Logo2.png" width="50%" />
       </div>
-  
-      <ion-item >
-        <ion-label color="light">Email</ion-label>
-        <ion-input color="light" type="mail" placeholder="Adresse email" (input)="setEmail($event.target.value)"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="light">Mot de passe</ion-label>
-        <ion-input color="light" type="password" placeholder="Mot de passe" (input)="setMdp($event.target.value)"></ion-input>
-      </ion-item>
-  
-      <ion-item lines="none">
-        <button ion-button color="light" slot="end" fill="clear">Mot de passe oublié ?</button>
-      </ion-item>
-  
-      <button ion-button color="light" expand="block" shape="round" fill="outline" (click)="connexion()">Connexion</button>
-      <br>
-      <button ion-button color="tertiary" expand="block" shape="round">Inscription</button>
-  
-      <ion-item lines="none">
-        <ion-label color="light" text-center>Ou connectez-vous avec</ion-label>
-      </ion-item>
-      
-      <div class="flex">
-        <button ion-button color="facebook" shape="round">
-          <ion-icon slot="start" name="logo-facebook"></ion-icon>
-          Facebook
+
+      <div class="padding">
+
+        <ion-item>
+          <ion-input color="light" type="mail" placeholder="Email" (input)="setEmail($event.target.value)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input color="light" type="password" placeholder="Mot de passe" (input)="setMdp($event.target.value)">
+          </ion-input>
+        </ion-item>
+
+        <p color="light" slot="end" fill="clear" style="font-size: 10px; margin-left: 20px; font-style: italic;">
+          Mot de passe oublié ?
+        </p>
+
+        <button col-8 ion-button full (click)="connexion()"
+          style="border-radius:20px;  background-color: #3EBDC6; margin: auto; margin-top: 20px;">
+          <p>Se Connecter</p>
         </button>
-        <button ion-button color="google" color="youtube" shape="round">
-          <ion-icon slot="start" name="logo-google"></ion-icon>
-          Google
-        </button>
+        <a color="tertiary" expand="block" shape="round"
+          style="display: flex; margin: auto; text-decoration: none; justify-content: center; margin-top: 10px; font-style: italic; color: black; margin-bottom: 20px;">Je
+          n'ai pas encore de compte</a>
+
+
+        <hr size="4" color="primary" style="height: 3px; color: #3EBDC6;">
+        <ion-label color="light" text-center
+          style="color: black; font-weight: bold; position:absolute; top: 470px; left: 200px; background-color: white; padding-left: 10px; padding-right: 10px;">
+          OU</ion-label>
+
+
+        <div class="flex" style="display: flex; flex-direction:column">
+          <button ion-button color="light" shape="round">
+            <ion-icon slot="start" name="logo-google"></ion-icon>
+            <p style="text-align: center; margin-left: auto; margin-right: auto;">Se connecter avec Google</p>
+            
+          </button>
+          <button ion-button color="facebook" shape="round">
+            <ion-icon slot="start" name="logo-facebook"></ion-icon>
+            <p style="text-align: center; margin-left: auto; margin-right: auto;">Se connecter avec Facebook</p>         
+          </button>
+        </div>
       </div>
-  
     </div>
   </ng-template>
 </ion-content>
