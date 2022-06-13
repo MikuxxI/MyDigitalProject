@@ -15,12 +15,15 @@ import { DetailPlace } from "../pages/home/detail-place/detail-place";
 import { Discovery } from "../pages/home/discovery/discovery";
 import { CategorieService } from "../services/categories.service";
 import { SearchPage } from "../pages/search/search";
+import { LoginPage } from "../pages/login/login";
+import { UserService } from "../services/login.service";
 
 @NgModule({
   declarations: [
     MyApp,
     TabsPage,
     HomePage,
+    LoginPage,
     SingleBookPage,
     Discovery,
     DetailPlace,
@@ -32,6 +35,7 @@ import { SearchPage } from "../pages/search/search";
     MyApp,
     TabsPage,
     HomePage,
+    LoginPage,
     SingleBookPage,
     Discovery,
     DetailPlace,
@@ -42,6 +46,7 @@ import { SearchPage } from "../pages/search/search";
     CdsService,
     CategorieService,
     PlaceService,
+    UserService,
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },

@@ -8,19 +8,19 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item icon-start (click)="onNavigate(rootPage)">
+      <button ion-item icon-start (click)="onNavigate(homePage)">
         <ion-icon name="power">Accueil</ion-icon>
       </button>
-      <button ion-item icon-start (click)="onNavigate(rootPage)">
+      <button ion-item icon-start (click)="onNavigate(homePage)">
         <ion-icon name="options">Recherche</ion-icon>
       </button>
-      <button ion-item icon-start (click)="onNavigate(rootPage)">
+      <button ion-item icon-start (click)="onNavigate(homePage)">
         <ion-icon name="options">Favoris</ion-icon>
       </button>
-      <button ion-item icon-start (click)="onNavigate(rootPage)">
+      <button ion-item icon-start (click)="onNavigate(homePage)">
         <ion-icon name="options">Communauté</ion-icon>
       </button>
     </ion-list>
   </ion-content>
 </ion-menu>
-<ion-nav [root]="tabsPage" #myContent></ion-nav>
+<ion-nav [root]="rootPage" #myContent></ion-nav>

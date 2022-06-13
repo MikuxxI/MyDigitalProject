@@ -7,11 +7,14 @@ import { TabsPage } from "../pages/tabs/tabs";
 import { NavController } from "ionic-angular";
 import { MenuController } from "ionic-angular";
 import { HomePage } from "../pages/home/home";
+import { LoginPage } from "../pages/login/login";
+
 @Component({
   templateUrl: "app.html",
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = LoginPage;
+  homePage:any = HomePage;
   tabsPage: any = TabsPage;
 
   @ViewChild("myContent") content: NavController;

@@ -13,6 +13,18 @@ page-search {
 
   #map{
     height: 100%;
-    
   }
+
+  ion-searchbar{
+    display: flex;
+    
+    .searchbar-input{
+      display: flex;
+      border-radius: 20px;
+      width: 50%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
 }
