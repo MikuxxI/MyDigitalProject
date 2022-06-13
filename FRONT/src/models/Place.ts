@@ -6,6 +6,8 @@ export class Place {
   photo: string;
   categorie: Categorie;
   adresse:string;
+  latitude:string;
+  longitude:string;
 
   constructor(public name: string) {
     this.description = "Test";

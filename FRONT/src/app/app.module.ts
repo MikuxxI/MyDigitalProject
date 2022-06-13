@@ -17,6 +17,8 @@ import { CategorieService } from "../services/categories.service";
 import { SearchPage } from "../pages/search/search";
 import { LoginPage } from "../pages/login/login";
 import { UserService } from "../services/login.service";
+import { FavoryPage } from "../pages/favory/favory";
+import { CommunityPage } from "../pages/community/community";
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { UserService } from "../services/login.service";
     Discovery,
     DetailPlace,
     SearchPage,
+    FavoryPage,
+    CommunityPage
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -39,7 +43,9 @@ import { UserService } from "../services/login.service";
     SingleBookPage,
     Discovery,
     DetailPlace,
-    SearchPage
+    SearchPage,
+    FavoryPage,
+    CommunityPage
   ],
   providers: [
     TimeFormater,

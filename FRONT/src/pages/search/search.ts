@@ -1,4 +1,6 @@
 import { Component, ViewChild, ElementRef } from "@angular/core";
+import { Place } from "../../models/Place";
+import { PlaceService } from "../../services/place.service";
 
 declare var google: any;
 
@@ -14,16 +16,13 @@ export class SearchPage {
 
   infoWindows: any = [];
 
-  markers: any = [
-    {
-      title: "MyDigitalSchool Rennes",
-      latitude: "48.048372840470805",
-      longitude: "-1.7424267908073365"
-    }
-  ]
+  markers: Place[];
 
   constructor(
-  ) { }
+    private placeService: PlaceService
+  ) {
+    this.markers = this.placeService.placeList.slice();
+  }
 
   ionViewDidEnter() {
     this.showMap();
@@ -34,9 +33,12 @@ export class SearchPage {
       let position = new google.maps.LatLng(marker.latitude, marker.longitude);
       let mapMarker = new google.maps.Marker({
         position: position,
-        title: marker.title,
+        title: marker.name,
         latitude: marker.latitude,
-        longitude: marker.longitude
+        longitude: marker.longitude,
+        description: marker.description,
+        adresse: marker.adresse,
+        ville: marker.ville,
       });
 
       mapMarker.setMap(this.map);
@@ -48,8 +50,9 @@ export class SearchPage {
   addInfoWindowsToMarker(marker) {
     let infoWindowContent = '<div id="content">' +
       '<h2 id="firstHeading" class="firstHeading"> ' + marker.title + '</h2>' +
-      '<p> Latitude:' + marker.latitude + '</p>' +
-      '<p> Longitude:' + marker.longitude + '</p>' +
+      '<p> Description: ' + marker.description + '</p>' +
+      '<p> Adresse: ' + marker.adresse + '</p>' +
+      '<p> Ville: ' + marker.ville + '</p>' +
       '</div>';
 
     let infoWindow = new google.maps.InfoWindow({

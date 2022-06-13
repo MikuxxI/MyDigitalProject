@@ -2,23 +2,24 @@
   <ion-header color="customColor">
     <ion-toolbar>
       <div class="tamere">
-        <img src="../../assets/imgs/Logo2.png" height="40px"/>
+        <img src="../../assets/imgs/Logo2.png" height="40px" />
       </div>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    <ion-list>
-      <button ion-item icon-start (click)="onNavigate(homePage)">
-        <ion-icon name="power">Accueil</ion-icon>
+  <ion-content style="background: linear-gradient(#3EBDC6, #3EA6C6);">
+    <ion-list style="background-color: transparent; " detail="false" mode='md'>
+      <button ion-item icon style="background-color: transparent;">
+        <p style="color: white; text-align: right;">En savoir plus</p>
       </button>
-      <button ion-item icon-start (click)="onNavigate(homePage)">
-        <ion-icon name="options">Recherche</ion-icon>
+      <button ion-item icon-start style="background-color: transparent;">
+        <p style="color: white; text-align: right;">Mentions légales</p>
       </button>
-      <button ion-item icon-start (click)="onNavigate(homePage)">
-        <ion-icon name="options">Favoris</ion-icon>
+      <button ion-item icon-start style="background-color: transparent;">
+        <p style="color: white; text-align: right;">Nous contacter</p>
       </button>
-      <button ion-item icon-start (click)="onNavigate(homePage)">
-        <ion-icon name="options">Communauté</ion-icon>
+      <hr>
+      <button ion-item icon-start (click)="disconnect()" style="background-color: transparent;"> 
+        <p style="color: white; text-align: right;">Se déconnecter</p>
       </button>
     </ion-list>
   </ion-content>

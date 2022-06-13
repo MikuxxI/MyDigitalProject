@@ -37,4 +37,9 @@ export class MyApp {
     this.content.setRoot(page);
     this.menuCtrl.close();
   }
+
+  disconnect(){
+    this.content.setRoot(this.rootPage);
+    this.menuCtrl.close();
+  }
 }

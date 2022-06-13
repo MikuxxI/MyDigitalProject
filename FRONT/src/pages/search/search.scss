@@ -12,17 +12,20 @@ page-search {
   }
 
   #map{
-    height: 100%;
+    margin-top: 40px;
+    height: 50%;
+    position: relative;
   }
 
-  ion-searchbar{
+  .ion-searchbar{
     display: flex;
-    
+    justify-content: center;
+    margin: auto;
+
     .searchbar-input{
-      display: flex;
-      border-radius: 20px;
+      border-radius: 40px;
       width: 50%;
-      justify-content: center;
+      position: fixed;
       text-align: center;
     }
   }

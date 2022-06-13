@@ -15,16 +15,25 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-ion-menu{
+ion-menu {
+
+  ion-content {
+    background-color: red;
+  }
+
+  ion-list{
+    background-color: transparent;
+  }
+
   color: aqua !important;
 
-  .tamere{
+  .tamere {
     display: flex;
     justify-content: center;
   }
-  img{
+
+  img {
     align-items: center;
     display: flex;
   }
 }
-

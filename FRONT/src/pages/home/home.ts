@@ -1,12 +1,9 @@
 import { Component } from "@angular/core";
 import { MenuController } from "ionic-angular";
-import { ModalController } from "ionic-angular";
-import { Observable } from "rxjs";
 import { Categorie } from "../../models/Categorie";
 import { Place } from "../../models/Place";
 import { CategorieService } from "../../services/categories.service";
 import { PlaceService } from "../../services/place.service";
-import { SingleBookPage } from "./single-book/single-book";
 
 @Component({
   selector: "page-home",
