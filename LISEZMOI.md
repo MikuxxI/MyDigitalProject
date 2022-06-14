@@ -34,7 +34,7 @@ Retapper les commandes ci-dessous dans votre inviter de commande
     cd MyDigitalProject-main/MyDigitalProject-main/FRONT
 
     # Etape 3
-    nmp i
+    npm i
     
     # Etape 4
     npm start
