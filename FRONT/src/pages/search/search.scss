@@ -11,22 +11,27 @@ page-search {
     }
   }
 
-  #map{
-    margin-top: 40px;
-    height: 50%;
+  #map {
+    height: 100%;
     position: relative;
   }
 
-  .ion-searchbar{
+  .ion-searchbar {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
+    width: 100%;
+    position: absolute;
+    z-index: 6000;
     margin: auto;
 
-    .searchbar-input{
+    .searchbar-input-container {
+      margin: auto;
+    }
+
+    .searchbar-input {
+      width: 100%;
       border-radius: 40px;
-      width: 50%;
-      position: fixed;
-      text-align: center;
     }
   }
 

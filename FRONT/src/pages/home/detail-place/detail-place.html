@@ -2,8 +2,10 @@
   <ion-img [src]="place.photo" (click)="onLoadLivre(index)"></ion-img>
   <ion-card>
     <div class="title">
-      <ion-card-header (click)="onLoadLivre(index)">{{place.categorie.name}}</ion-card-header>
-      <button style="background-color: white;" item-right clear (click)='like()'>
+      <ion-card-header (click)="onLoadLivre(index)"
+        >{{place.categorie.name}}</ion-card-header
+      >
+      <button style="background-color: white" item-right clear (click)="like()">
         <ion-icon [name]="icone"></ion-icon>
       </button>
     </div>

@@ -19,6 +19,7 @@ import { LoginPage } from "../pages/login/login";
 import { UserService } from "../services/login.service";
 import { FavoryPage } from "../pages/favory/favory";
 import { CommunityPage } from "../pages/community/community";
+import { GeolocationService } from "../services/geolocation.service";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { CommunityPage } from "../pages/community/community";
     DetailPlace,
     SearchPage,
     FavoryPage,
-    CommunityPage
+    CommunityPage,
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -45,7 +46,7 @@ import { CommunityPage } from "../pages/community/community";
     DetailPlace,
     SearchPage,
     FavoryPage,
-    CommunityPage
+    CommunityPage,
   ],
   providers: [
     TimeFormater,
@@ -55,6 +56,7 @@ import { CommunityPage } from "../pages/community/community";
     UserService,
     StatusBar,
     SplashScreen,
+    GeolocationService,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ],
 })
