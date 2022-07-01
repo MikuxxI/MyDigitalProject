@@ -8,8 +8,10 @@ import { TabsPage } from "../tabs/tabs";
   selector: "page-login",
   templateUrl: "login.html",
 })
+
 export class LoginPage {
-  public connected = true;
+  public connected = false;
+  public login = true;
   public users: User[];
   email: string;
   mdp: string;
@@ -20,7 +22,7 @@ export class LoginPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public _userService: UserService
-  ) {}
+  ) { }
 
   ionViewWillEnter() {
     this.users = this._userService.users.slice();
@@ -43,5 +45,13 @@ export class LoginPage {
 
   setMdp(value) {
     this.mdp = value;
+  }
+
+  isAnInscription() {
+    this.login = false;
+  }
+
+  isAlreadyUser() {
+    this.login = true;
   }
 }

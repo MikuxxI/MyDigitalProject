@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef } from "@angular/core";
 import { MenuController } from "ionic-angular";
 import { Place } from "../../models/Place";
-import { GeolocationService } from "../../services/geolocation.service";
+//import { GeolocationService } from "../../services/geolocation.service";
 import { PlaceService } from "../../services/place.service";
 
 declare var google: any;
@@ -22,10 +22,10 @@ export class SearchPage {
   constructor(
     private placeService: PlaceService,
     private menuCtrl: MenuController,
-    private geolocation: GeolocationService
+   // private geolocation: GeolocationService
   ) {
     this.markers = this.placeService.placeList.slice();
-    console.log(this.geolocation.getGeolocation());
+    //console.log(this.geolocation.getGeolocation());
   }
 
   ionViewDidEnter() {

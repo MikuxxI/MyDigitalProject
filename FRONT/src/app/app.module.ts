@@ -19,7 +19,7 @@ import { LoginPage } from "../pages/login/login";
 import { UserService } from "../services/login.service";
 import { FavoryPage } from "../pages/favory/favory";
 import { CommunityPage } from "../pages/community/community";
-import { GeolocationService } from "../services/geolocation.service";
+//import { GeolocationService } from "../services/geolocation.service";
 
 @NgModule({
   declarations: [
@@ -56,7 +56,7 @@ import { GeolocationService } from "../services/geolocation.service";
     UserService,
     StatusBar,
     SplashScreen,
-    GeolocationService,
+    //GeolocationService,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ],
 })

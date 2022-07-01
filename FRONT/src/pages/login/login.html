@@ -1,55 +1,119 @@
-<ion-content [ngClass]="connected ? 'connected' : 'loginPage'" >
+<ion-content [ngClass]="connected ? 'connected' : 'loginPage'">
+
   <div *ngIf="connected; else loginPage">
     <ion-nav [root]="tabsPage" #myContent></ion-nav>
   </div>
+
   <ng-template #loginPage>
-    <div color="primary" class="background-color">
-      <div class="logo">
-        <img src="../../assets/imgs/Logo2.png" width="50%" />
-      </div>
+    <div *ngIf="login; else inscription">
+      <div color="primary" class="background-color">
+        <div class="logo">
+          <img src="../../assets/imgs/Logo2.png" width="50%" />
+        </div>
 
-      <div class="padding">
+        <div class="padding">
 
-        <ion-item>
-          <ion-input color="light" type="mail" placeholder="Email" (input)="setEmail($event.target.value)"></ion-input>
-        </ion-item>
+          <ion-item>
+            <ion-input color="light" type="mail" placeholder="Email" (input)="setEmail($event.target.value)">
+            </ion-input>
+          </ion-item>
 
-        <ion-item>
-          <ion-input color="light" type="password" placeholder="Mot de passe" (input)="setMdp($event.target.value)">
-          </ion-input>
-        </ion-item>
+          <ion-item>
+            <ion-input color="light" type="password" placeholder="Mot de passe" (input)="setMdp($event.target.value)">
+            </ion-input>
+          </ion-item>
 
-        <p color="light" slot="end" fill="clear" style="font-size: 10px; margin-left: 20px; font-style: italic;">
-          Mot de passe oublié ?
-        </p>
+          <p color="light" slot="end" fill="clear" style="font-size: 10px; margin-left: 20px; font-style: italic;">
+            Mot de passe oublié ?
+          </p>
 
-        <button col-8 ion-button full (click)="connexion()"
-          style="border-radius:20px;  background-color: #3EBDC6; margin: auto; margin-top: 20px;">
-          <p>Se connecter</p>
-        </button>
-        <a color="tertiary" expand="block" shape="round"
-          style="display: flex; margin: auto; text-decoration: none; justify-content: center; margin-top: 10px; font-style: italic; color: black; margin-bottom: 20px;">Je
-          n'ai pas encore de compte</a>
-
-
-        <hr size="4" color="primary" style="height: 3px; color: #3EBDC6;">
-        <ion-label color="light" text-center
-          style="color: black; font-weight: bold; position:absolute; top: 470px; left: 175px; background-color: white; padding-left: 10px; padding-right: 10px;">
-          OU</ion-label>
-
-
-        <div class="flex" style="display: flex; flex-direction:column">
-          <button ion-button color="light" shape="round">
-            <ion-icon slot="start" name="logo-google"></ion-icon>
-            <p style="text-align: center; margin-left: auto; margin-right: auto;">Se connecter avec Google</p>
-            
+          <button col-8 ion-button full (click)="connexion()"
+            style="border-radius:20px;  background-color: #3EBDC6; margin: auto; margin-top: 20px;">
+            <p>Se connecter</p>
           </button>
-          <button ion-button color="facebook" shape="round">
-            <ion-icon slot="start" name="logo-facebook"></ion-icon>
-            <p style="text-align: center; margin-left: auto; margin-right: auto;">Se connecter avec Facebook</p>         
-          </button>
+          <a color="tertiary" expand="block" shape="round" (click)="isAnInscription()"
+            style="display: flex; margin: auto; text-decoration: none; justify-content: center; margin-top: 10px; font-style: italic; color: black; margin-bottom: 20px;">Je
+            n'ai pas encore de compte</a>
+
+
+          <hr size="4" color="primary" style="height: 3px; color: #3EBDC6;">
+          <ion-label color="light" text-center
+            style="color: black; font-weight: bold; position:absolute; top: 470px; left: 175px; background-color: white; padding-left: 10px; padding-right: 10px;">
+            OU</ion-label>
+
+
+          <div class="flex" style="display: flex; flex-direction:column">
+            <button ion-button color="light" shape="round">
+              <ion-icon slot="start" name="logo-google"></ion-icon>
+              <p style="text-align: center; margin-left: auto; margin-right: auto;">Se connecter avec Google</p>
+
+            </button>
+            <button ion-button color="facebook" shape="round">
+              <ion-icon slot="start" name="logo-facebook"></ion-icon>
+              <p style="text-align: center; margin-left: auto; margin-right: auto;">Se connecter avec Facebook</p>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </ng-template>
 </ion-content>
+
+<ng-template #inscription>
+  <div color="primary" class="background-color">
+    <div class="logo">
+      <img src="../../assets/imgs/Logo2.png" width="50%" />
+    </div>
+
+    <div class="padding">
+
+      <ion-item>
+        <ion-input color="light" type="mail" placeholder="Prénom" (input)="setFirstname($event.target.value)"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input color="light" type="mail" placeholder="Nom" (input)="setLastname($event.target.value)"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input color="light" type="mail" placeholder="Email" (input)="setEmail($event.target.value)"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input color="light" type="password" placeholder="Mot de passe" (input)="setMdp($event.target.value)">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input color="light" type="password" placeholder="Confirmer le mot de passe" (input)="setMdp($event.target.value)">
+        </ion-input>
+      </ion-item>
+
+      <button col-8 ion-button full (click)="inscription()"
+        style="border-radius:20px;  background-color: #3EBDC6; margin: auto; margin-top: 20px;">
+        <p>Inscription</p>
+      </button>
+
+      <a color="tertiary" expand="block" shape="round" (click)="isAlreadyUser()"
+        style="display: flex; margin: auto; text-decoration: none; justify-content: center; margin-top: 10px; font-style: italic; color: black; margin-bottom: 20px;">J'ai déjà un compte</a>
+
+      <hr size="4" color="primary" style="height: 3px; color: #3EBDC6;">
+      <ion-label color="light" text-center
+        style="color: black; font-weight: bold; position:absolute; top: 585px; left: 175px; background-color: white; padding-left: 10px; padding-right: 10px;">
+        OU</ion-label>
+
+
+      <div class="flex" style="display: flex; flex-direction:column">
+        <button ion-button color="light" shape="round">
+          <ion-icon slot="start" name="logo-google"></ion-icon>
+          <p style="text-align: center; margin-left: auto; margin-right: auto;">S'inscrire avec Google</p>
+
+        </button>
+        <button ion-button color="facebook" shape="round">
+          <ion-icon slot="start" name="logo-facebook"></ion-icon>
+          <p style="text-align: center; margin-left: auto; margin-right: auto;">S'inscrire avec Facebook</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>
