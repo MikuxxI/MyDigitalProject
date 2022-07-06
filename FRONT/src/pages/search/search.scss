@@ -16,6 +16,28 @@ page-search {
     position: relative;
   }
 
+  .buttom-button{ display: flex;
+    width: 100%;
+    position: absolute;
+    height: 30px;
+    background-color: white;
+    z-index: 6000;
+    top:735px;
+    border-radius: 20px;
+    text-align: center;
+  
+    justify-content: center;
+    box-shadow: 0px -2px 10px black;
+
+    .tiret{
+      margin-top: 5px;
+      height: 5px;
+      width: 40px;
+      border-radius: 2px;      
+      background-color:lightslategray;
+    }
+  }
+
   .ion-searchbar {
     margin-top: 10px;
     display: flex;

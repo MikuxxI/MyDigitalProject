@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar style="background-image: url({{place.photo}})">
+    <div>
+      <div style="position: absolute; top:0px; left:0px;">
+        <ion-buttons>
+          <button ion-button clear (click)="dismissModal()">
+            <ion-icon size="large" color="light" name="arrow-round-back" style="font-size: 40px; color:black; margin-top:15px"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title style="margin-top: 45px; margin-left: -10px;" icon-start>
+          <p style="color: white; margin-top: 5px; margin-left: 5px;">{{place.name}}</p>
+        </ion-title>
+      </div>
+    </div>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-title style="text-align: left;" icon-start>
+    <p>Rubriques</p>
+  </ion-title>
+  <h1>We&rsquo;ll be back soon!</h1>
+  <div>
+      <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment.</p>
+      <p>&mdash; Developers</p>
+  </div>
+</ion-content>

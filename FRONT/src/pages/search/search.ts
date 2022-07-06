@@ -1,8 +1,9 @@
 import { Component, ViewChild, ElementRef } from "@angular/core";
-import { MenuController } from "ionic-angular";
+import { MenuController, ModalController } from "ionic-angular";
 import { Place } from "../../models/Place";
 //import { GeolocationService } from "../../services/geolocation.service";
 import { PlaceService } from "../../services/place.service";
+import { SearchModalPage } from "../home/search-modal/search-modal";
 
 declare var google: any;
 
@@ -22,6 +23,7 @@ export class SearchPage {
   constructor(
     private placeService: PlaceService,
     private menuCtrl: MenuController,
+    private modalCtrl: ModalController
    // private geolocation: GeolocationService
   ) {
     this.markers = this.placeService.placeList.slice();
@@ -79,7 +81,6 @@ export class SearchPage {
       this.closeAllInfoWindows();
       infoWindow.open(this.map, marker);
     });
-
     this.infoWindows.push(infoWindow);
   }
 
@@ -107,5 +108,13 @@ export class SearchPage {
 
   onToggleMenu() {
     this.menuCtrl.open();
+  }
+
+  search(){
+    let modal = this.modalCtrl.create(SearchModalPage, {
+      index: 0,
+    });
+    modal.present();
+    
   }
 }

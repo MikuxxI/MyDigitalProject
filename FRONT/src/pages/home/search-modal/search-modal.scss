@@ -1,0 +1,25 @@
+page-single-book {
+
+  ion-header {
+    height: 100px;
+  }
+
+  img {
+    width: 10em;
+  }
+
+  button {
+
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin-left: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.7em !important;
+    overflow: hidden;
+    max-width: 100%;
+
+  }
+
+}

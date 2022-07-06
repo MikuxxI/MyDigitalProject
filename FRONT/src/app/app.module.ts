@@ -19,6 +19,7 @@ import { LoginPage } from "../pages/login/login";
 import { UserService } from "../services/login.service";
 import { FavoryPage } from "../pages/favory/favory";
 import { CommunityPage } from "../pages/community/community";
+import { SearchModalPage } from "../pages/home/search-modal/search-modal";
 //import { GeolocationService } from "../services/geolocation.service";
 
 @NgModule({
@@ -33,6 +34,7 @@ import { CommunityPage } from "../pages/community/community";
     SearchPage,
     FavoryPage,
     CommunityPage,
+    SearchModalPage
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -47,6 +49,7 @@ import { CommunityPage } from "../pages/community/community";
     SearchPage,
     FavoryPage,
     CommunityPage,
+    SearchModalPage,
   ],
   providers: [
     TimeFormater,
