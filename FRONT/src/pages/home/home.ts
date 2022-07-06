@@ -19,7 +19,7 @@ export class HomePage {
     private placeService: PlaceService,
     private categorieService: CategorieService,
     private menuCtrl: MenuController
-  ) {}
+  ) { }
 
   ionViewWillEnter() {
     this.placeList = this.placeService.placeList.slice();
@@ -37,8 +37,11 @@ export class HomePage {
     );
   }
 
-  test(categorieId:number){
-    console.log(categorieId);
-    this.categorieSelected = this.categories[categorieId];
+  test(categorieId: number) {
+    if (this.categorieSelected == null) {
+      this.categorieSelected = this.categories[categorieId];
+    } else {
+      this.categorieSelected = null;
+    }
   }
 }

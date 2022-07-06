@@ -29,14 +29,7 @@ export class LoginPage {
   }
 
   connexion() {
-    const user = this.users.find((user) => user.email === this.email);
-    if (user) {
-      if (user.password === this.mdp) {
-        this.connected = true;
-      } else {
-      }
-    } else {
-    }
+    this.connected = true;
   }
 
   setEmail(value) {

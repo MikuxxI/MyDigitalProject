@@ -18,7 +18,7 @@
         <ion-card class="filter-card" (click)="test(0)">
           <div class="title">
             <ion-card-header>
-              <img class="icon" src="../../assets/imgs/restaurant.png"/>
+              <img class="icon" src="../../assets/imgs/restaurant.png" />
             </ion-card-header>
           </div>
           <ion-card-content>
@@ -29,8 +29,8 @@
       <div class="col">
         <ion-card class="filter-card" (click)="test(1)">
           <div class="title">
-            <ion-card-header>   
-              <img class="icon" src="../../assets/imgs/event.png"/>
+            <ion-card-header>
+              <img class="icon" src="../../assets/imgs/event.png" />
             </ion-card-header>
           </div>
           <ion-card-content>
@@ -44,7 +44,7 @@
         <ion-card class="filter-card">
           <div class="title">
             <ion-card-header>
-              <img class="icon" src="../../assets/imgs/place.png"/>
+              <img class="icon" src="../../assets/imgs/place.png" />
             </ion-card-header>
           </div>
           <ion-card-content>
@@ -56,7 +56,7 @@
         <ion-card class="filter-card">
           <div class="title">
             <ion-card-header>
-              <img class="icon" src="../../assets/imgs/activity.png"/>
+              <img class="icon" src="../../assets/imgs/activity.png" />
             </ion-card-header>
           </div>
           <ion-card-content>
@@ -68,7 +68,7 @@
         <ion-card class="filter-card">
           <div class="title">
             <ion-card-header>
-              <img class="icon" src="../../assets/imgs/local.png"/>
+              <img class="icon" src="../../assets/imgs/local.png" />
             </ion-card-header>
           </div>
           <ion-card-content>
@@ -80,7 +80,7 @@
         <ion-card class="filter-card">
           <div class="title">
             <ion-card-header>
-              <img class="icon" src="../../assets/imgs/tops.png"/>
+              <img class="icon" src="../../assets/imgs/tops.png" />
             </ion-card-header>
           </div>
           <ion-card-content>
@@ -102,8 +102,10 @@
         </ion-select>
       </ion-item>
     </div>
-    <div ion-item *ngFor="let place of placeList; let i = index" icon-start>
-      <page-single-place [place]="place" [index]="i"></page-single-place>
+    <div *ngFor="let place of placeList; let i = index" icon-start>
+      <div ion-item *ngIf="categorieSelected == null || place.categorie.id == categorieSelected.id">
+        <page-single-place [place]="place" [index]="i"></page-single-place>
+      </div>
     </div>
   </div>
 </ion-content>
